@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:columnCount="3" >
+
+            <com.basilsystems.custom.views.ButtonView
+                android:id="@+id/mode_appliance_button"
+                android:layout_width="@dimen/appliance_button"
+                android:layout_height="@dimen/appliance_button"
+                android:layout_marginTop="5dp"
+                app:autoColor="@color/green"
+                app:circleColor="@color/blue_color"
+                app:circleLabel="Hello"
+                app:isAuto="true"
+                app:isChecked="true"
+                app:normalColor="@color/tabDark"
+                app:offColor="@color/light_gray_header_color"
+                app:onColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/appliance_button"
+                android:paddingTop="10dp" >
+
+                <CheckBox
+            android:id="@+id/select_mode_appliance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+             />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center" >
+
+                    <SeekBar
+                        android:id="@+id/mode_statusBar"
+                        style="@style/CustomSeekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dip"
+                        android:max="100"
+                        android:minWidth="40dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+</RelativeLayout>

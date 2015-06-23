@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal" >
+
+   
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/edit_appliance"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/edit_icon"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RENAME"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/schedule_appliance"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/schedule_icon"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SCHEDULE"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        
+
+</LinearLayout>

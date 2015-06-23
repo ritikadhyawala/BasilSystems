@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bfbfcf"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="20dp" >
+
+        <SeekBar
+            android:id="@+id/statusBar"
+            style="@style/CustomSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_weight="1"
+            android:max="100"
+            android:minWidth="196dp"
+            android:progress="90"
+            android:secondaryProgress="80" />
+
+        <CheckBox
+            android:id="@+id/autoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:button="@drawable/cutom_auto_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_time_for_the_above_action"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/hours_start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rectangle"
+                android:entries="@array/hour_array"
+                android:padding="10dp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="20dp"
+                android:layout_height="3dip"
+                android:background="#bfbfcf" />
+
+            <Spinner
+                android:id="@+id/minutes_start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rectangle"
+                android:entries="@array/minute_array"
+                android:padding="10dp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="20dp"
+                android:layout_height="3dip"
+                android:background="#bfbfcf" />
+
+            <Spinner
+                android:id="@+id/am_pm_start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rectangle"
+                android:entries="@array/am_pm"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_time_for_the_above_action"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/hours_end"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rectangle"
+                android:entries="@array/hour_array"
+                android:padding="10dp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="20dp"
+                android:layout_height="3dip"
+                android:background="#bfbfcf" />
+
+            <Spinner
+                android:id="@+id/minutes_end"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rectangle"
+                android:entries="@array/minute_array"
+                android:padding="10dp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="20dp"
+                android:layout_height="3dip"
+                android:background="#bfbfcf" />
+
+            <Spinner
+                android:id="@+id/am_pm_end"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_rectangle"
+                android:entries="@array/am_pm"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="3dip"
+            android:layout_height="20dp"
+            android:background="#bfbfcf" />
+
+        <CheckBox
+            android:id="@+id/only_today"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/settings_rectangle"
+            android:padding="10dp"
+            android:text="@string/only_today"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="3dip"
+            android:layout_height="20dp"
+            android:background="#bfbfcf" />
+
+        <Button
+            android:id="@+id/select_week_days"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_rectangle"
+            android:padding="10dp"
+            android:text="@string/pick_days_of_a_week" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <Button
+            android:id="@+id/schedule_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/black_button"
+            android:text="@string/save"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="3dip"
+            android:layout_height="10dp"
+            android:background="#bfbfcf" />
+
+        <Button
+            android:id="@+id/schedule_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_button"
+            android:text="@string/cancel"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

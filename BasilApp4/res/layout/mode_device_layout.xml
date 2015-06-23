@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+<LinearLayout 
+    android:id="@+id/mode_device_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="30dip" >
+
+    <CheckBox
+            android:id="@+id/select_mode_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+             />
+    
+    <ImageView
+        android:id="@+id/mode_device_image"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/living" />
+
+     <TextView
+        android:id="@+id/mode_device_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="26dip"
+        android:textStyle="bold" >
+    </TextView>
+    </LinearLayout>
+    </RelativeLayout>

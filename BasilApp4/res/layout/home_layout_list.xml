@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+     android:layout_width="match_parent"
+    android:layout_height="150dp">
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dip" >
+
+    <Button
+        android:id="@+id/place_option_button"
+        android:layout_width="25dp"
+        android:layout_height="10dp"
+        android:layout_gravity="right"
+        android:background="@drawable/options" />
+
+    <LinearLayout
+        android:id="@+id/place_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="26dip"
+            android:textStyle="bold" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>
+
+<LinearLayout 
+    android:id="@+id/add_place_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dip" 
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/plus_icon" />
+    
+    <TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/add_place_button"
+    android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+</LinearLayout>
+ <LinearLayout
+        android:id="@+id/options_layout_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:alpha="0.8"
+        android:background="@android:color/background_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/edit_place"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_icon"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RENAME"
+                android:textColor="#54f1ff"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/delete_place"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/delete_icon"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELETE"
+                android:textColor="#54f1ff"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

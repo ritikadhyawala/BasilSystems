@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BasilApp1</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="username">Username/E-mail</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot the Password</string>
+    <string name="register">Register</string>
+    <string name="name">Name*</string>
+    <string name="email">Email*</string>
+    <string name="login_using">login using</string>
+    <string name="password_sent_to_email">Password sent to your email</string>
+    <string name="ok">OK</string>
+    <string name="places">Places</string>
+    <string name="no_place_added">It seems there is no smart home or office in your name</string>
+    <string name="add_place_button">Add a place</string>
+    <string name="log_out">Logout</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="give_place_name">Give a name to your place (e.g. home/office etc.)</string>
+    <string name="refresh">Refresh</string>
+    <string name="add_device">Add Device</string>
+    <string name="delete_device">Delete Device</string>
+    <string name="home">HOME</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="rename">Rename</string>
+    <string name="schedule_appliances">Schedule Appliances</string>
+    <string name="general">General</string>
+    <string name="manage_permissions">Manage Permissions</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="sound">Sound</string>
+    <string name="emergency">Emergency</string>
+    <string name="about">About</string>
+    <string name="country">Country</string>
+    <string name="network">Network</string>
+    <string name="fire">Fire</string>
+    <string name="gas_leak">Gas leak</string>
+    <string name="intrusion">Intrusion</string>
+    <string name="notification">Notification</string>
+    <string name="fire_emergency_contact_no">Fire emergency contact no.</string>
+    <string name="retype_passowrd">Retype password</string>
+    <string name="no_device_added">It seems there is no smart board in your house</string>
+    <string name="device_name">Device name (eg. Bedroom)</string>
+    <string name="network_name">Network name (SSID)</string>
+    <string name="network_password">Network password</string>
+
+    <string-array name="hour_array">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="minute_array">
+        <item></item>
+        <item>00</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+    </string-array>
+    <string-array name="am_pm">
+        <item></item>
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+
+    <string name="start_time_for_the_above_action">Start time for the above action</string>
+    <string name="end_time_for_the_above_action">End time for the above action</string>
+    <string name="select_days_of_the_week">Select days of the week</string>
+    <string name="just_once">Just once</string>
+    <string name="repeat">Repeat</string>
+    <string name="pick_days_of_a_week">Pick days of a week</string>
+    <string name="only_today">Only today</string>
+    <string name="add_mode">Add mode</string>
+    <string name="delete_mode">Delete mode</string>
+    <string name="modes">Modes</string>
+    <string name="add_a_mode">Add a mode</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_cc3_xsplash_screen">CC3XSplashScreen</string>
+    <string name="cc3000_version_text">CC3000</string>
+    <string name="config_title">Device Configuration</string>
+    <string name="footer_title">DESIGNED AND DEVELOPED BY</string>
+    <string name="password_hint">Password </string>
+    <string name="ssid_label">SSID</string>
+    <string name="gatewayip">Gateway IP Address</string>
+    <string name="key_label">Key</string>
+    <string name="devicename_label">Device Name</string>
+    <string name="start_label">Start</string>
+    <string name="stop_label">Stop</string>
+    <string name="back_label">Back</string>
+    <string name="about_us_label">About Us</string>
+    <string name="contact_label">Contact</string>
+    <string name="about_us_desc_para_one">[x]cube LABS is a custom interactive mobile design and development studio,providing [x]pertise in UI/UX strategy and cutting edge engineering  solutions.</string>
+    <string name="about_us_desc_para_two">We continue to shatter traditional paradigms thanks largely to our dedication to and belief in quality ,communicative design.</string>
+    <string name="about_us_content">Rav</string>
+    <string name="about_us_desc_para_three">If you are planning on integrating the CC3000 into your products, wed love to help.</string>
+    <string name="xcube_url">www.xcubelabs.com</string>
+    <string name="xcube_contact_email">sales@xcubelabs.com</string>
+    <string name="about_xcube_address">2211 Commerce St. Suit 200,Dallas TX 75201</string>
+    <string name="alert_cc3x_title">CC3x Alert</string>
+    <string name="alert_invalid_input_title">Invalid input</string>
+    <string name="alert_successfully_connected">CC3x App Connected Successfully</string>
+    <string name="alert_connection_failed">Failed to configure CC3000 device</string>
+    <string name="alert_connection_timeout">Connection to CC3000 was timed out.Please try again</string>
+    <string name="alert_successfully_failed">Failed to configure CC3000 device</string>
+    <string name="alert_no_network_title">No Network</string>
+    <string name="alert_invalid_password_msg">Please enter valid password</string>
+    <string name="alert_invalid_gatewayip_msg">Please enter valid Gateway IP address</string>
+    <string name="alert_invalid_ssid_mesg">Please enter valid SSID</string>
+    <string name="alert_invalid_key_mesg">Please enter valid Key exactly 16 characters</string>
+    <string name="alert_no_wifi_mesg">WiFi not available.Please check your WiFi connection.</string>
+    <string name="config_default_gateway_val">127.0.0.1</string>
+    <string name="config_default_device_name">Device Name</string>
+
+    <!-- Utility Strings -->
+    <string name="cc3x_string_ok">ok</string>
+    <string name="control_access">Control Access</string>
+    
+    <string-array name="remote_devices">
+      <item >TV</item>
+      <item >AC</item>
+      </string-array>
+
+</resources>

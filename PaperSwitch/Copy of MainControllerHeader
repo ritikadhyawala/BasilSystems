@@ -1,0 +1,32 @@
+/*
+ * MainController.h
+ *
+ *  Created on: Mar 22, 2015
+ *      Author: Nirmala
+ */
+
+#include <Arduino.h>
+#include "TouchManager.h"
+#include "LocalCommManager.h"
+#include "LedAndOuputManager.h"
+#include "IRRemoteReceiver.h"
+
+#ifndef MAINCONTROLLER_H_
+#define MAINCONTROLLER_H_
+
+#define MAX_LEVEL_VALUE 16
+
+class MainController {
+private:
+public:
+	void monitor();
+	void initMainController();
+};
+
+
+extern "C" uint32_t radioAddress;
+extern "C" void processTouchOrIRData(TouchDetectData touchData);
+extern "C" void processIRLevelData(int level, int switchNo);
+extern "C" void changeApplianceStatus(int, TouchType);
+extern  "C" void onConfigureButtonPressed();
+#endif /* MAINCONTROLLER_H_ */

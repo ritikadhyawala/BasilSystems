@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.basilsystems.activities"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission  android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+    <permission
+        android:name="com.basilsystems.activities.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.basilsystems.activities.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.basilsystems.application.BasilApplication"
+        android:theme="@style/AppTheme" >
+         <activity
+            android:name="com.ti.cc3x.android.CC3XSplashScreen"
+            android:configChanges="keyboardHidden|orientation|screenSize"  android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+      </activity>
+         <!-- CC3XConfigActivity activity -->
+        <activity
+            android:name="com.ti.cc3x.android.CC3XConfigActivity"   android:windowSoftInputMode="adjustPan|stateHidden"  android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+          <!-- About us screen activity -->
+        
+        <activity
+            android:name="com.ti.cc3x.android.CC3XAboutUs"  android:windowSoftInputMode="stateAlwaysHidden" android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> 
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.ListPlacesActivity"
+            android:label="@string/app_name" >
+<!--             <intent-filter> -->
+<!--             <action android:name="android.intent.action.MAIN" /> -->
+<!--             <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter>   -->
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.ApplianceActivity"
+            android:label="@string/app_name"
+            android:theme="@style/action_bar_style" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.ModeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/action_bar_style" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.NoPlacesActivity"
+            android:label="@string/app_name" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.AddPlaceNameActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.AddDeviceActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.ListModeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.ListDevicesActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.ScheduleActivity"
+            android:label="@string/app_name" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.NotificationPendingIntent"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.basilsystems.activities.ListModeDeviceActivity1"
+             android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.basilsystems.activities.ListModeApplianceActivity"
+             android:label="@string/app_name" >
+        </activity>
+        
+         <activity
+            android:name="com.basilsystems.activities.NetworkSwitchSelectionActivity"
+             android:label="@string/app_name" >
+        </activity>
+        
+
+        <receiver android:name="com.basilsystems.activities.StartActivity$ResponseReceiver" >
+            <intent-filter>
+                <action android:name="com.basilsystems.broadcast" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.basilsystems.activities.LoginActivity$LoginReceiver" >
+            <intent-filter>
+                <action android:name="com.basilsystems.broadcast" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.basilsystems.activities.ApplianceActivity$ApplianceReceiver" >
+            <intent-filter>
+                <action android:name="com.basilsystems.broadcast.appliance" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.basilsystems.activities.AddRemoteActivity$RemoteReceiver" >
+            <intent-filter>
+                <action android:name="com.basilsystems.broadcast.remote" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.basilsystems.activities.StartActivity$StartActivityReceiver" >
+            <intent-filter>
+                <action android:name="com.basilsystems.broadcast.remote" />
+            </intent-filter>
+        </receiver>
+       <receiver
+            android:name="com.basilsystems.broadcast.receivers.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.basilsystems.activities" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.basilsystems.activities.GCMIntentService"
+            android:enabled="true" />
+        <service
+            android:name="com.basilsystems.services.MqttService"
+            android:enabled="true" />
+        
+    </application>
+
+</manifest>

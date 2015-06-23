@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:columnCount="3" >
+
+            <com.basilsystems.custom.views.ButtonView
+                android:id="@+id/appliance_button"
+                android:layout_width="@dimen/appliance_button"
+                android:layout_height="@dimen/appliance_button"
+                android:layout_marginTop="5dp"
+                app:autoColor="@color/green"
+                app:circleColor="@color/blue_color"
+                app:circleLabel="Hello"
+                app:isAuto="true"
+                app:isChecked="true"
+                app:normalColor="@color/tabDark"
+                app:offColor="@color/light_gray_header_color"
+                app:onColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/appliance_button"
+                android:paddingTop="10dp" >
+
+                <Button
+                    android:id="@+id/options_button"
+                    android:layout_width="25dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/options" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center" >
+
+                    <SeekBar
+                        android:id="@+id/statusBar"
+                        style="@style/CustomSeekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dip"
+                        android:max="100"
+                        android:minWidth="40dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/options_layout_appliance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:alpha="0.8"
+        android:background="@android:color/background_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/edit_appliance"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_icon"
+                android:padding="5dp" />
+            <Button
+                android:id="@+id/assign_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="Assign Appliance"
+                android:padding="5dp" />
+             <Button
+                android:id="@+id/assign_theme"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="Assign Theme"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RENAME"
+                android:textColor="#54f1ff"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/schedule_appliance"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/schedule_icon"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCHEDULE"
+                android:textColor="#54f1ff"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/remote"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/options_remote_button"
+            android:layout_width="25dp"
+            android:layout_height="10dp"
+            android:layout_gravity="right"
+            android:background="@drawable/options" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/remote_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="REMOTE"
+                android:textColor="@color/tabDark"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

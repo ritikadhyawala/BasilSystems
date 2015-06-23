@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+      @author : @alexduhem 
+		blog.sakaroz.com
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:drawable="@drawable/black_gradient"
+            android:shape="oval" >
+            <solid android:color="#000000"></solid>
+            <size
+                android:height="@dimen/seekbar_thumb_radius1"
+                android:width="@dimen/seekbar_thumb_radius1" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_checked="true">
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/auto_button" />
+            </item>
+            <item android:state_checked="false">
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/auto_off_button" />
+            </item>
+        </selector>
+    </item>
+
+</layer-list>

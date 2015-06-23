@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:columnCount="2" >
+
+            <com.basilsystems.custom.views.ButtonView
+                android:id="@+id/appliance_button"
+                android:layout_width="@dimen/appliance_button"
+                android:layout_height="@dimen/appliance_button"
+                android:layout_marginTop="5dp"
+                app:autoColor="@color/green"
+                app:circleColor="@color/blue_color"
+                app:circleLabel="Hello"
+                app:isAuto="true"
+                app:isChecked="true"
+                app:normalColor="@color/tabDark"
+                app:offColor="@color/light_gray_header_color"
+                app:onColor="@color/white" />
+
+            <SeekBar
+                android:id="@+id/statusBar"
+                style="@style/CustomSeekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dip"
+                android:max="100"
+                android:minWidth="40dp" />
+        </GridLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_time_for_the_above_action"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/hours_start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/hour_array"
+                android:padding="10dp" />
+
+            <Space
+                android:id="@+id/separator"
+                android:layout_width="@dimen/schedule_time_space"
+                android:layout_height="3dip" />
+
+            <Spinner
+                android:id="@+id/minutes_start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/minute_array"
+                android:padding="10dp" />
+
+            <Space
+                android:id="@+id/separator"
+                android:layout_width="@dimen/schedule_time_space"
+                android:layout_height="3dip" />
+
+            <Spinner
+                android:id="@+id/am_pm_start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/am_pm"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_time_for_the_above_action"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/hours_end"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/hour_array"
+                android:padding="10dp" />
+
+            <Space
+                android:id="@+id/separator"
+                android:layout_width="@dimen/schedule_time_space"
+                android:layout_height="3dip" />
+
+            <Spinner
+                android:id="@+id/minutes_end"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/minute_array"
+                android:padding="10dp" />
+
+            <Space
+                android:id="@+id/separator"
+                android:layout_width="@dimen/schedule_time_space"
+                android:layout_height="3dip" />
+
+            <Spinner
+                android:id="@+id/am_pm_end"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/am_pm"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only Today"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <com.basilsystems.custom.views.WeekButton
+            android:id="@+id/today_button"
+            android:layout_width="@dimen/scheduling_button"
+            android:layout_height="@dimen/scheduling_button"
+            app:selectedColor="@color/red"
+            app:unselectedColor="@color/light_gray_header_color"
+            app:weekButtonChecked="true"
+            app:weekLabel="TODAY"
+            app:weekLabelColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick days of the week"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.basilsystems.custom.views.WeekButton
+                android:id="@+id/mon_button"
+                android:layout_width="@dimen/scheduling_button"
+                android:layout_height="@dimen/scheduling_button"
+                app:selectedColor="@color/red"
+                app:unselectedColor="@color/light_gray_header_color"
+                app:weekButtonChecked="true"
+                app:weekLabel="MON"
+                app:weekLabelColor="@color/white" />
+
+            <com.basilsystems.custom.views.WeekButton
+                android:id="@+id/tue_button"
+                android:layout_width="@dimen/scheduling_button"
+                android:layout_height="@dimen/scheduling_button"
+                app:selectedColor="@color/red"
+                app:unselectedColor="@color/light_gray_header_color"
+                app:weekButtonChecked="true"
+                app:weekLabel="TUE"
+                app:weekLabelColor="@color/white" />
+
+            <com.basilsystems.custom.views.WeekButton
+                android:id="@+id/wed_button"
+                android:layout_width="@dimen/scheduling_button"
+                android:layout_height="@dimen/scheduling_button"
+                app:selectedColor="@color/red"
+                app:unselectedColor="@color/light_gray_header_color"
+                app:weekButtonChecked="true"
+                app:weekLabel="WED"
+                app:weekLabelColor="@color/white" />
+
+            <com.basilsystems.custom.views.WeekButton
+                android:id="@+id/thur_button"
+                android:layout_width="@dimen/scheduling_button"
+                android:layout_height="@dimen/scheduling_button"
+                app:selectedColor="@color/red"
+                app:unselectedColor="@color/light_gray_header_color"
+                app:weekButtonChecked="true"
+                app:weekLabel="THU"
+                app:weekLabelColor="@color/white" />
+
+            <com.basilsystems.custom.views.WeekButton
+                android:id="@+id/fri_button"
+                android:layout_width="@dimen/scheduling_button"
+                android:layout_height="@dimen/scheduling_button"
+                app:selectedColor="@color/red"
+                app:unselectedColor="@color/light_gray_header_color"
+                app:weekButtonChecked="true"
+                app:weekLabel="FRI"
+                app:weekLabelColor="@color/white" />
+
+            <com.basilsystems.custom.views.WeekButton
+                android:id="@+id/sat_button"
+                android:layout_width="@dimen/scheduling_button"
+                android:layout_height="@dimen/scheduling_button"
+                app:selectedColor="@color/red"
+                app:unselectedColor="@color/light_gray_header_color"
+                app:weekButtonChecked="true"
+                app:weekLabel="SAT"
+                app:weekLabelColor="@color/white" />
+
+            <com.basilsystems.custom.views.WeekButton
+                android:id="@+id/sun_button"
+                android:layout_width="@dimen/scheduling_button"
+                android:layout_height="@dimen/scheduling_button"
+                app:selectedColor="@color/red"
+                app:unselectedColor="@color/light_gray_header_color"
+                app:weekButtonChecked="true"
+                app:weekLabel="SUN"
+                app:weekLabelColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/schedule_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textStyle="bold" />
+
+        <Space
+            android:id="@+id/separator"
+            android:layout_width="3dip"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/schedule_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

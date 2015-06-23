@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="tabMedium">#2B2B2B</color>
+    <color name="tabDark">#000000</color>
+    <color name="tabTransparent">#10ffffff</color>
+    <color name="default_screen_bg">#20324a</color>
+    <color name="rounded_container_bg">#80000000</color>
+    <color name="rounded_container_border">#3b3f44</color>
+    <color name="light_gray_header_color">#646663</color>
+    <color name="blue_color">#000f37</color>
+    <color name="light_blue_color">#000f20</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#c70e0e</color>
+    <color name="green">#00ff00</color>
+
+    <color name="black">#000000</color>
+    <color name="grey_background">#E1E1E1</color>
+    <color name="button_normal">#2888C4</color>
+ 	<color name="grey_text_color">#545454</color>
+ 	<color name="blue_text_color">#0000ED</color>
+ 	<color name="disabled_text_color">#9A9A9A</color>
+ 	<color  name="text_color_grey">#575757</color>
+ 	
+</resources>

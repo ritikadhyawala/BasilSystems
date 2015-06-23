@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+<LinearLayout 
+    android:id="@+id/device_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="30dip" >
+
+     <Button
+        android:id="@+id/device_option_button"
+        android:layout_width="25dp"
+        android:layout_height="10dp"
+        android:layout_gravity="right"
+        android:background="@drawable/options" />
+    
+    <ImageView
+        android:id="@+id/device_image"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/living" />
+
+    <TextView
+        android:id="@+id/list_item"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="16dip"
+        android:textStyle="bold" >
+    </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/options_layout_device"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:alpha="0.8"
+        android:background="@android:color/background_dark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/edit_device"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_icon"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RENAME"
+                android:textColor="#54f1ff"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/delete_device"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/delete_icon"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELETE"
+                android:textColor="#54f1ff"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

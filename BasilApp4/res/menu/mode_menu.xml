@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mainMenu"
+        android:icon="@drawable/overflow_icon"
+        android:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/add_mode"
+                android:title="@string/add_mode"/>
+            <item
+                android:id="@+id/delete_mode"
+                android:title="@string/delete_mode"/>
+        </menu>
+    </item>
+
+</menu>

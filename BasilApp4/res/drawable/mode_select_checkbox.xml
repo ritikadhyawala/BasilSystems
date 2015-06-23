@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+      @author : @alexduhem 
+		blog.sakaroz.com
+-->
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:state_checked="true">
+                <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+                    <item>
+                        <shape
+                            android:innerRadius="0dp"
+                            android:shape="ring"
+                            android:thicknessRatio="2"
+                            android:useLevel="false" >
+                            <solid android:color="@android:color/black" />
+                            <size android:width="50dp" android:height="50dp"></size>
+                        </shape>
+                    </item>
+                    <item>
+                        <shape android:shape="oval" >
+                            <solid android:color="#FF27AE60" />
+                            <size android:width="20dp" android:height="20dp"/>
+                        </shape>
+                    </item>
+                </layer-list>
+            </item>
+            <item android:state_checked="false">
+                <shape
+                            android:innerRadius="0dp"
+                            android:shape="ring"
+                            android:thicknessRatio="2"
+                            android:useLevel="false" >
+                            <solid android:color="@android:color/darker_gray" />
+                            <size android:width="50dp" android:height="50dp"></size>
+                        </shape>
+            </item>
+        </selector>
+   

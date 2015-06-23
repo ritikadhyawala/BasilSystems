@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mainMenu"
+        android:icon="@drawable/overflow_icon"
+        android:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/refresh"
+                android:title="@string/refresh"/>
+            <item
+                android:id="@+id/add_device"
+                android:title="@string/add_device"/>
+            <item
+                android:id="@+id/delete_device"
+                android:title="@string/delete_device"/>
+            <item
+                android:id="@+id/miscellaneous"
+                android:title="@string/miscellaneous"/>
+            <item
+                android:id="@+id/rename"
+                android:title="@string/rename"/>
+            <item
+                android:id="@+id/logout"
+                android:title="@string/log_out"/>
+        </menu>
+    </item>
+
+</menu>
